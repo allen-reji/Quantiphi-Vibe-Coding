@@ -404,7 +404,7 @@ export default function BankingDashboard() {
 
   const balance = useMemo(
     () =>
-      transactions.reduce((acc, t) => acc + (t.type === "credit" ? t.amount : -t.amount), 12450) ,
+      transactions.reduce((acc, t) => acc + (t.type === "credit" ? t.amount : -t.amount), 0) ,
     [transactions],
   )
   const totalSavings = useMemo(
